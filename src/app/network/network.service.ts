@@ -13,7 +13,7 @@ interface Post {
   providedIn: 'root'
 })
 export class NetworkService {
-  apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  apiUrl = 'assets/db.json';
 
   constructor(private http: HttpClient) {}
 
@@ -22,8 +22,8 @@ export class NetworkService {
     return this.http.get<Post[]>(this.apiUrl);
   }
 
-  // Fetch single user by ID
+    // Fetch single user by ID
   getUserById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${id}`);
+      return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
 }

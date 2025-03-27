@@ -35,6 +35,7 @@ export class CreateRulesComponent {
       },
       // Observer error
       error: (error) => {
+        console.error('Error loading JSON:', error);
         this.errorMessage = error;
       }
     })
